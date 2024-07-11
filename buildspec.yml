@@ -9,7 +9,7 @@ phases:
       - npm install
       - echo Completed the install phase.
     finally:
-      - echo In the final stage of install phase 
+      - echo In the final stage of install phases 
   pre_build:
     commands:
       - echo Entered the pre_build phase.
