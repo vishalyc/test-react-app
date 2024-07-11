@@ -5,23 +5,23 @@ phases:
     runtime-versions:
       nodejs: 16
     commands:
-      - echo Entered the install phase...
+      - echo Entered the install phase.
       - npm install
-      - echo Completed the install phase...
+      - echo Completed the install phase.
     finally:
       - echo In the final stage of install phase 
   pre_build:
     commands:
-      - echo Entered the pre_build phase...
+      - echo Entered the pre_build phase.
       - echo Completed the pre build phase 
   build:
     commands:
-      - echo Entered the build phase...
+      - echo Entered the build phase.
       - npm run build
-      - echo Completed the build phase...
+      - echo Completed the build phase.
   post_build:
     commands:
-      - echo Entered the post_build phase...
+      - echo Entered the post_build phase.
       - echo Build completed on `date`
   artifacts:
     base-directory: ./build
