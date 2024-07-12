@@ -1,29 +1,20 @@
 version: 0.2
 
-phases: 
+phases:
   install:
     runtime-versions:
-      nodejs:  16
+      nodejs: 12
     commands:
-      - echo Entered the install phase.
       - npm install
-      - echo Completed the install phase.
-    finally:
-      - echo In the final stage of install phases 
-  pre_build:
-    commands:
-      - echo Entered the pre_build phase.
-      - echo Completed the pre build phase 
   build:
     commands:
-      - echo Entered the build phase.
       - npm run build
-      - echo Completed the build phase.
-  post_build:
-    commands:
-      - echo Entered the post_build phase.
-      - echo Build completed on `date`
-  artifacts:
-    base-directory: ./build
-    files:
-      - '**/*'
+
+artifacts:
+  base-directory: ./build
+  files:
+    - '**/*'
+
+cache:
+  paths:
+    - './node_modules/**/*'
